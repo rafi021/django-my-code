@@ -1,0 +1,21 @@
+.page-header-custom{
+    background-color: powderblue;
+    margin-top: 0;
+    margin-bottom: 0 ;
+    padding: 20px 20px 20px 40px;
+}
+
+h1{
+    color: red;
+}
+h2{
+    color: Green;
+}
+
+p{
+    text-align: justify;
+}
+
+h3{
+    color: Blue;
+}

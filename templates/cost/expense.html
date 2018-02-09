@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table  table-striped">
+<thead>
+<tr>
+    <th>Purpose</th>
+    <th>Amount</th>
+    <th>Date</th>
+    <th>Action</th>
+</tr>
+</thead>
+<tbody>
+{% for expense in expenses %}
+<tr>
+    <td>{{ expense.purpose }}</td>
+    <td>{{ expense.amount }}</td>
+    <td>{{ expense.date }}</td>
+    <td>
+        <a class="btn btn-primary" href="{% url 'edit-expense' expense.id %}">Edit</a>
+        <a class="btn btn-danger" href="{% url 'delete-expense' expense.id %}">Delete</a>
+    </td>
+</tr>
+{% endfor %}
+<tr>
+    <td>Total: </td>
+    <td>{{ total }}</td>
+</tr>
+</tbody>
+</table>
+<a class="btn btn-primary" href=" {% url 'add-expense' %}">Add New Expense</a>
+{% endblock %}
